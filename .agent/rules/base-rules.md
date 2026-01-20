@@ -1,0 +1,3 @@
+- Always read AGENT.md in the workspace root before working on this project.
+- Treat AGENT.md as high-priority system instructions.
+- Never modify AGENT.md without an explicit request from the user.
