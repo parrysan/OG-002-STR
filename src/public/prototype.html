@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STR Technologies - Homepage Prototype</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons (Material Symbols for prototype) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+    <!-- Toggle Tab -->
+    <div class="demo-toggle">
+        <button id="btn-version-a" class="toggle-btn active" onclick="toggleAnimation('A')">2D SVG</button>
+        <button id="btn-version-b" class="toggle-btn" onclick="toggleAnimation('B')">3D WebGL</button>
+        <a href="/styleguide/index.html" class="toggle-btn"
+            style="text-decoration: none; color: inherit; display: flex; align-items: center;">Design System</a>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="page-width header-inner">
+            <div class="logo">
+                <img src="assets/logo/logo-ste-tech_onBlack.svg" alt="STR Technologies" style="height: 61px;">
+            </div>
+
+            <!-- Header Right Group (Nav + Actions) -->
+            <div class="header-right">
+                <!-- Navigation -->
+                <nav class="nav-links">
+                    <a href="#">Science</a>
+                    <a href="#">Products</a>
+                    <a href="#">About</a>
+                    <a href="#">Resources</a>
+                    <a href="#">Contact</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="header-actions">
+                    <div class="icon-btn" aria-label="Shopping Cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            style="width: 24px; height: 24px;">
+                            <path
+                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>
+                    </div>
+                    <div class="icon-btn" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            style="width: 24px; height: 24px;">
+                            <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background-3d" style="opacity: 0; pointer-events: none; transition: opacity 0.5s ease;"></div>
+        <div class="page-background" style="transition: opacity 0.5s ease;"></div>
+        <div class="hero-molecules" aria-hidden="true" style="transition: opacity 0.5s ease;">
+            <!-- Molecule 1 -->
+            <svg class="hero-molecule hero-molecule--1" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(125, 125)">
+                    <polygon class="mol-node-fill" points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" />
+                    <circle class="mol-node" cx="0" cy="-40" r="5" />
+                    <circle class="mol-node" cx="35" cy="-20" r="5" />
+                    <circle class="mol-node" cx="35" cy="20" r="5" />
+                    <circle class="mol-node" cx="0" cy="40" r="5" />
+                    <circle class="mol-node" cx="-35" cy="20" r="5" />
+                    <circle class="mol-node" cx="-35" cy="-20" r="5" />
+                    <path class="mol-connection" d="M0,-40 L0,-70" />
+                    <circle class="mol-node" cx="0" cy="-70" r="4" />
+                    <path class="mol-connection" d="M35,-20 L65,-35" />
+                    <circle class="mol-node" cx="65" cy="-35" r="4" />
+                    <path class="mol-connection" d="M35,20 L65,35" />
+                    <circle class="mol-node" cx="65" cy="35" r="4" />
+                    <path class="mol-connection" d="M-35,-20 L-65,-35" />
+                    <circle class="mol-node" cx="-65" cy="-35" r="4" />
+                    <path class="mol-connection" d="M-35,20 L-65,35 L-85,60" />
+                    <circle class="mol-node" cx="-65" cy="35" r="4" />
+                    <circle class="mol-node" cx="-85" cy="60" r="4" />
+                </g>
+            </svg>
+
+            <!-- Molecule 2 -->
+            <svg class="hero-molecule hero-molecule--2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(30, 100)">
+                    <path class="chain-connection" d="M0,0 L35,0 L70,0 L105,0 L140,0" />
+                    <circle class="chain-node" cx="0" cy="0" r="5" />
+                    <circle class="chain-node" cx="35" cy="0" r="4" />
+                    <circle class="chain-node" cx="70" cy="0" r="5" />
+                    <circle class="chain-node" cx="105" cy="0" r="4" />
+                    <circle class="chain-node" cx="140" cy="0" r="5" />
+                    <path class="chain-connection" d="M35,0 L35,-35 L55,-55" />
+                    <circle class="chain-node" cx="35" cy="-35" r="4" />
+                    <circle class="chain-node" cx="55" cy="-55" r="4" />
+                    <path class="chain-connection" d="M105,0 L105,35" />
+                    <circle class="chain-node" cx="105" cy="35" r="4" />
+                </g>
+            </svg>
+        </div>
+        <div class="page-width">
+            <div class="hero-content">
+                <h1 class="text-hero">Synthetic Adjuvants for<br>Vaccine Innovation</h1>
+                <p class="text-subhero">Advancing global health through high-purity, GMP-grade adjuvants with secure
+                    supply
+                    chains for reliable vaccine development.</p>
+
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-primary btn-pill">Discover Our Science</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="hero-animation.js"></script>
+
+    <!-- Toggle Script -->
+    <script>
+        function toggleAnimation(version) {
+            const svgContainer = document.querySelector('.hero-molecules');
+            const bgContainer = document.querySelector('.page-background');
+            const threeContainer = document.querySelector('.hero-background-3d');
+            const btnA = document.getElementById('btn-version-a');
+            const btnB = document.getElementById('btn-version-b');
+
+            if (version === 'A') {
+                // Show SVG (2D)
+                svgContainer.style.opacity = '1';
+                bgContainer.style.opacity = '0.15';
+                threeContainer.style.opacity = '0';
+                threeContainer.style.pointerEvents = 'none';
+
+                btnA.classList.add('active');
+                btnB.classList.remove('active');
+            } else {
+                // Show Three.js (3D)
+                svgContainer.style.opacity = '0';
+                bgContainer.style.opacity = '0';
+                threeContainer.style.opacity = '1';
+                threeContainer.style.pointerEvents = 'auto';
+
+                btnB.classList.add('active');
+                btnA.classList.remove('active');
+            }
+        }
+    </script>
+
+    <!-- Product Grid Section -->
+    <section class="product-section">
+        <div class="section-header">
+            <h2 class="text-h2">Synthetic vaccine adjuvants for research and development</h2>
+        </div>
+
+        <div class="grid-3">
+            <!-- Product Card 1 -->
+            <article class="product-card">
+                <div class="product-icon">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">hexagon</span>
+                </div>
+                <h3 class="product-title">QS-21-Api</h3>
+                <div class="product-subtitle">Synthetic Saponin Adjuvant</div>
+
+                <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 24px;">
+                    Synthetic equivalent to natural QS-21 with identical immunostimulatory activity.
+                </p>
+
+                <div class="prod-specs">
+                    <div class="spec-row">
+                        <span class="spec-label">Purity</span>
+                        <span class="spec-value">≥98%</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">CAS</span>
+                        <span class="spec-value">1450904-00-5</span>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-ghost">View Details →</a>
+            </article>
+
+            <!-- Product Card 2 -->
+            <article class="product-card">
+                <div class="product-icon">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">hub</span>
+                </div>
+                <h3 class="product-title">HMLA</h3>
+                <div class="product-subtitle">TLR4 Agonist</div>
+
+                <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 24px;">
+                    Hexa-acyl Monophosphoryl Lipid A for potent immune response activation.
+                </p>
+
+                <div class="prod-specs">
+                    <div class="spec-row">
+                        <span class="spec-label">Purity</span>
+                        <span class="spec-value">≥97%</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Grade</span>
+                        <span class="spec-value">GMP / Research</span>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-ghost">View Details →</a>
+            </article>
+
+            <!-- Product Card 3 -->
+            <article class="product-card">
+                <div class="product-icon">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">share</span>
+                </div>
+                <h3 class="product-title">TDB</h3>
+                <div class="product-subtitle">Glycolipid Adjuvant</div>
+
+                <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 24px;">
+                    D-(+)-Trehalose 6,6'-dibehenate, a synthetic cord factor analogue.
+                </p>
+
+                <div class="prod-specs">
+                    <div class="spec-row">
+                        <span class="spec-label">Purity</span>
+                        <span class="spec-value">≥98%</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">FDA DMF</span>
+                        <span class="spec-value">040613</span>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-ghost">View Details →</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Synthetic Advantage Section -->
+    <section class="advantage-section">
+        <div class="page-width">
+            <div class="section-header text-center">
+                <h2 class="text-h2">The Synthetic Advantage</h2>
+                <p class="text-subhero" style="margin: 0 auto;">Why leading biopharma chooses synthetic over natural
+                    extracts.</p>
+            </div>
+
+            <div class="grid-3">
+                <!-- Advantage 1 -->
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <span class="material-symbols-outlined">water_drop</span>
+                    </div>
+                    <h3 class="text-h3">Unmatched Purity</h3>
+                    <p class="text-muted">Eliminate biological contaminants. Our synthetic process guarantees ≥98%
+                        purity for every batch, reducing regulatory risk.</p>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <span class="material-symbols-outlined">inventory_2</span>
+                    </div>
+                    <h3 class="text-h3">Secure Supply Chain</h3>
+                    <p class="text-muted">Not dependent on natural harvest limitations. Scalable GMP production ensures
+                        reliable supply for global demand.</p>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <span class="material-symbols-outlined">science</span>
+                    </div>
+                    <h3 class="text-h3">Batch Consistency</h3>
+                    <p class="text-muted">Identical chemical structure every time. Ensure reproducible results in
+                        clinical trials with zero biological variation.</p>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-strip">
+                <div class="trust-badge">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">verified</span>
+                    <span>GMP Certified</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">description</span>
+                    <span>FDA DMF Available</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">pets</span>
+                    <span>Non-Animal Origin</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="page-width">
+            <div class="footer-content">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <h4>
+                        <img src="assets/logo/STR only.svg" alt="" style="height: 32px; width: auto;">
+                        STR Technologies
+                    </h4>
+                    <p>Advancing biotech through synthetic purity and GMP-grade consistency.</p>
+                </div>
+
+                <!-- Navigation Column -->
+                <div class="footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">Science</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Column -->
+                <div class="footer-links">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 STR Technologies. All rights reserved.</p>
+                <div style="margin-top: 8px; font-size: 0.9rem; opacity: 0.8; display: flex; gap: 16px;">
+                    <span>Impact Theme Concept — Phase 1</span>
+                    <span style="opacity: 0.5;">|</span>
+                    <a href="/styleguide/index.html" style="color: inherit; text-decoration: underline;">Design System &
+                        Styleguide</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

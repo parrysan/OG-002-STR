@@ -1,0 +1,25 @@
+# System
+.DS_Store
+
+# Backups
+backups/
+
+# Dependencies (if installed in root)
+node_modules/
+
+# Build outputs
+dist/
+out/
+.next/
+
+# Firebase
+.firebase/
+
+# Gemini Agent
+.agent/
+!.agent/workflows/
+!.agent/rules/
+!.agent/README.md
+
+# Logs
+*.log
