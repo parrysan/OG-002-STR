@@ -175,151 +175,82 @@
 
         <div class="grid-3">
             <!-- Product Card 1 -->
-            <article class="product-card-v2">
+            <article class="product-card">
+                <div class="product-icon">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">hexagon</span>
+                </div>
+                <h3 class="product-title">QS-21-Api</h3>
+                <div class="product-subtitle">Synthetic Saponin Adjuvant</div>
 
-                <div class="card-body">
-                    <div class="prod-category">SAPONIN ADJUVANT</div>
-                    <h3 class="prod-title">QS-21-Api</h3>
-                    <p class="prod-desc">Synthetic Saponin Adjuvant</p>
+                <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 24px;">
+                    Synthetic equivalent to natural QS-21 with identical immunostimulatory activity.
+                </p>
 
-                    <div class="specs-list">
-                        <div class="spec-item">
-                            <span class="spec-key">Purity</span>
-                            <span class="spec-val">≥98% (HPLC)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-key">CAS</span>
-                            <span class="spec-val">1450904-00-5</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-key">MW</span>
-                            <span class="spec-val">1829.04 g/mol</span>
-                        </div>
+                <div class="prod-specs">
+                    <div class="spec-row">
+                        <span class="spec-label">Purity</span>
+                        <span class="spec-value">≥98%</span>
                     </div>
-
-                    <div class="pricing-box">
-
-                        <div class="price-row">
-                            <span class="price-qty">1 mg</span>
-                            <span class="price-amt">$285</span>
-                        </div>
-                        <div class="price-row">
-                            <span class="price-qty">5 mg</span>
-                            <span class="price-amt highlight">$1,180</span>
-                        </div>
-                        <div class="price-row">
-                            <span class="price-qty">25 mg</span>
-                            <span class="price-amt">$4,750</span>
-                        </div>
-                    </div>
-
-                    <div class="card-actions"
-                        style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 12px;">
-                        <a href="product-qs-21-api-c.html" class="btn btn-ghost btn-sm"
-                            style="width: auto; padding-left: 0;">View Details</a>
-                        <button class="btn btn-primary btn-sm" style="width: auto;">Add to Cart</button>
+                    <div class="spec-row">
+                        <span class="spec-label">CAS</span>
+                        <span class="spec-value">1450904-00-5</span>
                     </div>
                 </div>
+
+                <a href="product-qs-21-api-c.html" class="btn btn-ghost">View Details →</a>
             </article>
 
             <!-- Product Card 2 -->
-            <article class="product-card-v2">
+            <article class="product-card">
+                <div class="product-icon">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">hub</span>
+                </div>
+                <h3 class="product-title">HMLA</h3>
+                <div class="product-subtitle">TLR4 Agonist</div>
 
-                <div class="card-body">
-                    <div class="prod-category">TLR4 AGONIST</div>
-                    <h3 class="prod-title">HMLA</h3>
-                    <p class="prod-desc">Hexa-acyl Monophosphoryl Lipid A</p>
+                <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 24px;">
+                    Hexa-acyl Monophosphoryl Lipid A for potent immune response activation.
+                </p>
 
-                    <div class="specs-list">
-                        <div class="spec-item">
-                            <span class="spec-key">Purity</span>
-                            <span class="spec-val">≥97% (HPLC)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-key">Type</span>
-                            <span class="spec-val">MPLA Analogue</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-key">Grade</span>
-                            <span class="spec-val">GMP / Research</span>
-                        </div>
+                <div class="prod-specs">
+                    <div class="spec-row">
+                        <span class="spec-label">Purity</span>
+                        <span class="spec-value">≥97%</span>
                     </div>
-
-                    <div class="pricing-box">
-
-                        <div class="price-row">
-                            <span class="price-qty">1 mg</span>
-                            <span class="price-amt">$195</span>
-                        </div>
-                        <div class="price-row">
-                            <span class="price-qty">5 mg</span>
-                            <span class="price-amt highlight">$820</span>
-                        </div>
-                        <div class="price-row">
-                            <span class="price-qty">25 mg</span>
-                            <span class="price-amt">$3,400</span>
-                        </div>
-                    </div>
-
-                    <div class="card-actions"
-                        style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 12px;">
-                        <a href="#" class="btn btn-ghost btn-sm" style="width: auto; padding-left: 0;">View Details</a>
-                        <button class="btn btn-primary btn-sm" style="width: auto;">Add to Cart</button>
+                    <div class="spec-row">
+                        <span class="spec-label">Grade</span>
+                        <span class="spec-value">GMP / Research</span>
                     </div>
                 </div>
+
+                <a href="#" class="btn btn-ghost">View Details →</a>
             </article>
 
             <!-- Product Card 3 -->
-            <article class="product-card-v2">
+            <article class="product-card">
+                <div class="product-icon">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">share</span>
+                </div>
+                <h3 class="product-title">TDB</h3>
+                <div class="product-subtitle">Glycolipid Adjuvant</div>
 
-                <div class="card-body">
-                    <div class="prod-category">GLYCOLIPID ADJUVANT</div>
-                    <h3 class="prod-title">TDB</h3>
-                    <p class="prod-desc">Trehalose 6,6'-Dibehenate</p>
+                <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 24px;">
+                    D-(+)-Trehalose 6,6'-dibehenate, a synthetic cord factor analogue.
+                </p>
 
-                    <div class="specs-list">
-                        <div class="spec-item">
-                            <span class="spec-key">Purity</span>
-                            <span class="spec-val">≥98% (HPLC)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-key">Target</span>
-                            <span class="spec-val">Mincle Receptor</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-key">FDA DMF</span>
-                            <span class="spec-val">040613</span>
-                        </div>
+                <div class="prod-specs">
+                    <div class="spec-row">
+                        <span class="spec-label">Purity</span>
+                        <span class="spec-value">≥98%</span>
                     </div>
-
-                    <div class="pricing-box">
-                        <div class="price-row">
-                            <span class="price-qty">5 mg</span>
-                            <span class="price-amt">$145</span>
-                        </div>
-                        <div class="price-row">
-                            <span class="price-qty">25 mg</span>
-                            <span class="price-amt highlight">$520</span>
-                        </div>
-                        <div class="price-row">
-                            <span class="price-qty">100 mg</span>
-                            <span class="price-amt">$1,680</span>
-                        </div>
-                    </div>
-
-                    <div class="card-actions"
-                        style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 12px;">
-                        <a href="#" class="btn btn-ghost btn-sm" style="width: auto; padding-left: 0;">View Details</a>
-                        <button class="btn btn-primary btn-sm" style="width: auto;">Add to Cart</button>
+                    <div class="spec-row">
+                        <span class="spec-label">FDA DMF</span>
+                        <span class="spec-value">040613</span>
                     </div>
                 </div>
-            </article>
-        </div>
 
-        <div style="text-align: center; margin-top: 48px; color: var(--color-text-secondary); font-size: 0.95rem;">
-            Custom quantities, bulk pricing, and long-term supply agreements available — <a href="#"
-                style="color: var(--color-primary); font-weight: 600; text-decoration: none;">contact us</a>.
-        </div>
+                <a href="#" class="btn btn-ghost">View Details →</a>
+            </article>
         </div>
     </section>
 

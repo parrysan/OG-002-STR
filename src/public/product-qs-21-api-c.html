@@ -212,6 +212,106 @@
             animation: float 7s ease-in-out infinite;
             /* Slower float for the larger image */
         }
+
+        /* 5. Pack Size Selector */
+        .pack-size-selector {
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            background: #fff;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            margin-bottom: 24px;
+        }
+
+        .pack-size-header {
+            padding: 16px 20px;
+            background: #fafafa;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pack-header-title {
+            font-weight: 600;
+            color: var(--color-dark-blue);
+            font-size: 0.95rem;
+        }
+
+        .pack-header-subtitle {
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+        }
+
+        .pack-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 1px solid var(--color-border);
+            transition: background 0.2s;
+        }
+
+        .pack-row:last-child {
+            border-bottom: none;
+        }
+
+        .pack-row:hover {
+            background: #f9fbfd;
+        }
+
+        .pack-size-label {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--color-text-paragraph);
+            min-width: 60px;
+        }
+
+        .pack-price {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: var(--color-primary);
+            font-size: 1.05rem;
+            text-align: right;
+            margin-right: 24px;
+            flex-grow: 1;
+        }
+
+        .pack-contact {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--color-text-paragraph);
+            text-align: right;
+            margin-right: 24px;
+            flex-grow: 1;
+            opacity: 0.8;
+        }
+
+        .btn-pack-action {
+            height: 40px;
+            padding: 0 20px;
+            font-size: 0.9rem;
+            min-width: 120px;
+        }
+
+        .download-data-sheet-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border: 1px solid var(--color-primary);
+            color: var(--color-primary);
+            background: transparent;
+            border-radius: var(--radius-full);
+            text-align: center;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .download-data-sheet-btn:hover {
+            background: var(--color-primary-tint);
+            border-color: var(--color-primary);
+        }
     </style>
 </head>
 
@@ -287,21 +387,11 @@
 
                 <!-- Use 'Specs & Provenance' content directly -->
                 <div class="hero-left-content">
-                    <div class="product-key-specs" style="flex-direction: column; gap: 24px; border-bottom: none;">
-                        <div class="key-spec-item">
-                            <span class="label">Formula</span>
-                            <span class="value"
-                                style="font-size: 1.5rem;">C<sub>123</sub>H<sub>194</sub>O<sub>70</sub></span>
-                        </div>
-                        <div class="key-spec-item">
-                            <span class="label">Purity</span>
-                            <span class="value" style="font-size: 1.5rem;">≥95% (HPLC)</span>
-                        </div>
-                        <div class="key-spec-item">
-                            <span class="label">Primary Function</span>
-                            <span class="value" style="font-size: 1.5rem;">Potent Immunostimulant</span>
-                        </div>
-                    </div>
+                    <p class="body-text"
+                        style="font-size: 2rem; line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #1d1d1f; margin-bottom: 0;">
+                        The major isomeric constituent of the QS-21 fraction. Now fully synthetic. Exceptional potency
+                        for both humoral and cell-mediated immune responses.
+                    </p>
 
 
                 </div>
@@ -326,15 +416,40 @@
     <!-- Rest of Page Content -->
     <section class="section-padding bg-white" style="padding-top: 0;">
         <div class="page-width">
-            <h2 style="margin-bottom: 24px; border-bottom: 1px solid var(--color-border); padding-bottom: 16px;">Product
-                Overview</h2>
             <!-- Reuse Grid -->
             <div class="grid-2-col">
                 <div class="content-block">
-                    <p class="body-text">QS-21-Api is the major isomeric constituent (65%) of the QS-21 fraction derived
-                        from <em>Quillaja saponaria</em> bark, now available through advanced chemical synthesis. This
-                        saponin adjuvant has demonstrated exceptional ability to enhance both humoral and cell-mediated
-                        immune responses in preclinical and clinical vaccine trials.</p>
+                    <div class="specs-table-container">
+                        <table class="specs-table">
+                            <tbody>
+                                <tr>
+                                    <th>Formula</th>
+                                    <td style="font-family: 'JetBrains Mono', monospace;">
+                                        C<sub>123</sub>H<sub>194</sub>O<sub>70</sub></td>
+                                </tr>
+                                <tr>
+                                    <th>Purity</th>
+                                    <td>≥95% (HPLC)</td>
+                                </tr>
+                                <tr>
+                                    <th>Primary Function</th>
+                                    <td>Potent Immunostimulant</td>
+                                </tr>
+                                <tr>
+                                    <th>Molecular Weight</th>
+                                    <td>~1989 Da</td>
+                                </tr>
+                                <tr>
+                                    <th>Solubility</th>
+                                    <td>Water-soluble (rec. PBS pH 7.4)</td>
+                                </tr>
+                                <tr>
+                                    <th>Storage</th>
+                                    <td>-20°C, protect from light/moisture</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <div class="provenance-box" style="margin-top: 32px;">
                         <div class="provenance-icon">
@@ -349,22 +464,38 @@
                     </div>
                 </div>
                 <div class="specs-table-container">
-                    <table class="specs-table">
-                        <tbody>
-                            <tr>
-                                <th>Molecular Weight</th>
-                                <td>~1989 Da</td>
-                            </tr>
-                            <tr>
-                                <th>Solubility</th>
-                                <td>Water-soluble (rec. PBS pH 7.4)</td>
-                            </tr>
-                            <tr>
-                                <th>Storage</th>
-                                <td>-20°C, protect from light/moisture</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="pack-size-selector">
+                        <div class="pack-size-header">
+                            <span class="pack-header-title">Select Pack Size</span>
+                            <span class="pack-header-subtitle">Research & GMP grades available</span>
+                        </div>
+
+                        <div class="pack-row">
+                            <span class="pack-size-label">1 mg</span>
+                            <span class="pack-price">$285.00</span>
+                            <button class="btn-c-style btn-c-primary btn-pack-action">Add to Cart</button>
+                        </div>
+
+                        <div class="pack-row">
+                            <span class="pack-size-label">5 mg</span>
+                            <span class="pack-price">$1,180.00</span>
+                            <button class="btn-c-style btn-c-primary btn-pack-action">Add to Cart</button>
+                        </div>
+
+                        <div class="pack-row">
+                            <span class="pack-size-label">25 mg</span>
+                            <span class="pack-price">$4,750.00</span>
+                            <button class="btn-c-style btn-c-primary btn-pack-action">Add to Cart</button>
+                        </div>
+
+                        <div class="pack-row">
+                            <span class="pack-size-label">Bulk (≥100 mg)</span>
+                            <span class="pack-contact">Contact us</span>
+                            <button class="btn-c-style btn-c-outline btn-pack-action">Request Quote</button>
+                        </div>
+                    </div>
+
+                    <a href="#" class="download-data-sheet-btn">Download Technical Data Sheet</a>
                 </div>
             </div>
         </div>
