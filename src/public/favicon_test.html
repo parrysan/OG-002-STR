@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Visibility Test</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 2rem;
+            background: #333;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .card {
+            background: #222;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #444;
+        }
+
+        .preview-box {
+            width: 128px;
+            height: 128px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            /* Default browser tab is dark in dark mode */
+            border: 1px solid #555;
+        }
+
+        .preview-box.white-bg {
+            background-color: white;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* Filters */
+        .f-invert {
+            filter: invert(1);
+        }
+
+        .f-white-silhouette {
+            filter: brightness(0) invert(1);
+        }
+
+        .f-drop-shadow {
+            filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
+        }
+
+        .f-contrast {
+            filter: contrast(200%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Favicon Visibility Test</h1>
+    <p>Simulating Dark Mode Browser Tab (Black Background)</p>
+
+    <div class="container">
+        <!-- Control: White BG -->
+        <div class="card">
+            <div class="preview-box white-bg">
+                <img src="assets/favicon.svg" alt="Original on White">
+            </div>
+            <p>Original (White BG)</p>
+        </div>
+
+        <!-- Use Case: Black BG (Current state) -->
+        <div class="card">
+            <div class="preview-box">
+                <img src="assets/favicon.svg" alt="Original on Black">
+            </div>
+            <p>Original (Black BG)</p>
+        </div>
+
+        <!-- Filter: Invert -->
+        <div class="card">
+            <div class="preview-box">
+                <img src="assets/favicon.svg" class="f-invert" alt="Inverted">
+            </div>
+            <p>Invert(1)</p>
+            <code>filter: invert(1)</code>
+        </div>
+
+        <!-- Filter: White Silhouette -->
+        <div class="card">
+            <div class="preview-box">
+                <img src="assets/favicon.svg" class="f-white-silhouette" alt="White Silhouette">
+            </div>
+            <p>White Silhouette</p>
+            <code>brightness(0) invert(1)</code>
+        </div>
+
+        <!-- Filter: Contrast -->
+        <div class="card">
+            <div class="preview-box">
+                <img src="assets/favicon.svg" class="f-contrast" alt="High Contrast">
+            </div>
+            <p>High Contrast</p>
+            <code>contrast(200%)</code>
+        </div>
+
+        <!-- Filter: Drop Shadow -->
+        <div class="card">
+            <div class="preview-box">
+                <img src="assets/favicon.svg" class="f-drop-shadow" alt="Drop Shadow">
+            </div>
+            <p>Drop Shadow</p>
+            <code>drop-shadow(...)</code>
+        </div>
+    </div>
+</body>
+
+</html>

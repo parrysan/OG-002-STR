@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STR Technologies - Homepage Prototype</title>
+    <title>STR Technologies - Homepage Prototype (Clean)</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
     <!-- Fonts -->
@@ -15,7 +15,7 @@
         rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-clean.css">
 
     <!-- Icons (Material Symbols for prototype) -->
     <link rel="stylesheet"
@@ -26,6 +26,8 @@
 
     <!-- Toggle Tab -->
     <div class="demo-toggle">
+        <button id="btn-version-a" class="toggle-btn active" onclick="toggleAnimation('A')">2D SVG</button>
+        <button id="btn-version-b" class="toggle-btn" onclick="toggleAnimation('B')">3D WebGL</button>
         <a href="/styleguide/index.html" class="toggle-btn"
             style="text-decoration: none; color: inherit; display: flex; align-items: center;">Design System</a>
     </div>
@@ -35,7 +37,7 @@
         <div class="page-width header-inner">
             <div class="logo">
                 <a href="prototype.html">
-                    <img src="assets/logo/logo-svg-str/logo-str-003.1.svg" alt="STR Technologies" style="height: 57px;">
+                    <img src="assets/logo/logo-str.svg" alt="STR Technologies" style="height: 64px;">
                 </a>
             </div>
 
@@ -197,7 +199,7 @@
                     </div>
                 </div>
 
-                <a href="product-qs-21-api-c.html" class="btn btn-ghost">View Details →</a>
+                <a href="#" class="btn btn-ghost">View Details →</a>
             </article>
 
             <!-- Product Card 2 -->
@@ -320,10 +322,13 @@
                 <!-- Brand Column -->
                 <div class="footer-brand">
                     <h4>
-                        <img src="assets/logo/STR only.svg" alt="" style="height: 32px; width: auto;">
+                        <img src="assets/logo/logo-str.svg" alt="" style="height: 32px; width: auto;">
                         STR Technologies
                     </h4>
                     <p>Advancing biotech through synthetic purity and GMP-grade consistency.</p>
+                    <div style="margin-top: 24px;">
+                        <a href="#" class="btn btn-primary">Get in Touch</a>
+                    </div>
                 </div>
 
                 <!-- Navigation Column -->
@@ -351,7 +356,8 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2026 STR Technologies. All rights reserved.</p>
-                <div style="margin-top: 8px; font-size: 0.9rem; opacity: 0.8; display: flex; gap: 16px;">
+                <div
+                    style="margin-top: 8px; font-size: 0.9rem; opacity: 0.8; display: flex; gap: 16px; justify-content: center;">
                     <span>Impact Theme Concept — Phase 1</span>
                     <span style="opacity: 0.5;">|</span>
                     <a href="/styleguide/index.html" style="color: inherit; text-decoration: underline;">Design System &
