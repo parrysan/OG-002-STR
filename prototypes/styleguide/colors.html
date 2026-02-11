@@ -28,7 +28,7 @@
         /* Sidebar */
         .ds-sidebar {
             width: 280px;
-            background: var(--color-text-primary);
+            background: #FFFFFF;
             position: fixed;
             height: 100vh;
             overflow-y: auto;
@@ -36,6 +36,7 @@
             display: flex;
             flex-direction: column;
             z-index: 50;
+            border-right: 1px solid var(--color-border);
         }
 
         .ds-logo {
@@ -59,7 +60,7 @@
             display: block;
             width: fit-content;
             padding: 0.5rem 0;
-            color: #E5E7EB;
+            color: var(--color-text-secondary);
             text-decoration: none;
             font-size: 0.95rem;
             transition: color 0.2s;
@@ -81,7 +82,7 @@
 
         .ds-nav-link:hover,
         .ds-nav-link.active {
-            color: var(--color-primary-light);
+            color: var(--color-primary);
             font-weight: 500;
         }
 
@@ -198,27 +199,26 @@
     <!-- Sidebar Navigation -->
     <aside class="ds-sidebar">
         <div class="ds-logo">
-            <img src="../../assets/logo/logo-ste-tech_onBlack.svg" alt="STR Technologies" style="height: 48px;">
+            <img src="../../assets/logo/logo-str-06.svg" alt="STR Technologies" style="height: 100px;">
         </div>
 
         <div class="ds-nav-group">
-            <a href="index.html" class="ds-nav-link">Introduction</a>
+            <a href="/styleguide/index.html" class="ds-nav-link">Introduction</a>
         </div>
 
         <div class="ds-nav-group">
-            <div class="ds-nav-title">Foundation</div>
-            <a href="writing.html" class="ds-nav-link">Writing Style</a>
-            <a href="colors.html" class="ds-nav-link active">Colors</a>
-            <a href="typography.html" class="ds-nav-link">Typography</a>
+            <a href="/styleguide/writing.html" class="ds-nav-link">Writing Style</a>
+            <a href="/styleguide/colors.html" class="ds-nav-link active">Colors</a>
+            <a href="/styleguide/typography.html" class="ds-nav-link">Typography</a>
+            <a href="/styleguide/logo.html" class="ds-nav-link">Logo & Iconography</a>
         </div>
 
         <div class="ds-nav-group">
-            <div class="ds-nav-title">Building Blocks</div>
-            <a href="components.html" class="ds-nav-link">Components</a>
-            <a href="personas.html" class="ds-nav-link">Avatars & Personas</a>
+            <a href="/styleguide/components.html" class="ds-nav-link">Components</a>
+            <a href="/styleguide/personas.html" class="ds-nav-link">Avatars & Personas</a>
         </div>
 
-        <a href="../index.html" class="ds-nav-link" style="margin-top: auto;">Prototype →</a>
+        <a href="/prototype.html" class="ds-nav-link" style="margin-top: auto;">Prototype →</a>
     </aside>
 
     <!-- Main Content -->
@@ -267,8 +267,8 @@
 
         <!-- Page Navigation -->
         <div class="page-nav">
-            <a href="writing.html" class="page-nav-prev">Writing Style</a>
-            <a href="typography.html" class="page-nav-next">Typography</a>
+            <a href="/styleguide/writing.html" class="page-nav-prev">Writing Style</a>
+            <a href="/styleguide/typography.html" class="page-nav-next">Typography</a>
         </div>
     </main>
 

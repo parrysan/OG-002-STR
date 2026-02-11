@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Charter:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
 
     <!-- Icons -->
@@ -23,6 +23,10 @@
     <style>
         /* --- Proposal C Specific Styles --- */
 
+        /* 1a. Specs Table Override */
+        .specs-table-container {
+            border: none !important;
+        }
 
 
         /* 2. Sticky Product Bar (Dynamic Sizing) */
@@ -215,7 +219,8 @@
 
         /* 5. Pack Size Selector */
         .pack-size-selector {
-            border: 1px solid var(--color-border);
+            border: none;
+            /* Removed outline */
             border-radius: var(--radius-lg);
             background: #fff;
             overflow: hidden;
@@ -328,20 +333,18 @@
 
             <div class="header-right">
                 <nav class="nav-links">
-                    <a href="#">Science</a>
-                    <a href="#">Products</a>
-                    <a href="#">About</a>
-                    <a href="#">Resources</a>
-                    <a href="#">Contact</a>
+                    <a href="science.html">Science</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="contact.html">Contact</a>
                 </nav>
 
                 <div class="header-actions">
                     <div class="icon-btn" aria-label="Shopping Cart">
                         <span class="material-symbols-outlined">shopping_cart</span>
                     </div>
-                    <div class="icon-btn" aria-label="Search">
-                        <span class="material-symbols-outlined">search</span>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -373,7 +376,7 @@
                 </button>
 
                 <!-- Add to Cart (CTA) -->
-                <button class="btn-c-style btn-c-primary">
+                <button class="btn-c-style btn-c-primary" id="stickyAddToCart">
                     Add to Cart
                 </button>
             </div>
@@ -387,13 +390,10 @@
 
                 <!-- Use 'Specs & Provenance' content directly -->
                 <div class="hero-left-content">
-                    <p class="body-text"
-                        style="font-size: 2rem; line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #1d1d1f; margin-bottom: 0;">
+                    <p class="text-editorial" style="margin-bottom: 0;">
                         The major isomeric constituent of the QS-21 fraction. Now fully synthetic. Exceptional potency
                         for both humoral and cell-mediated immune responses.
                     </p>
-
-
                 </div>
 
                 <!-- Giant Molecule -->
@@ -401,12 +401,7 @@
                     <img src="images/qs-21-structure-render-transparent.png" alt="QS-21-Api Molecular Structure"
                         class="molecule-img-c">
                     <!-- Controls -->
-                    <div class="viewer-controls" style="bottom: 0; right: 0;">
-                        <button class="control-btn" aria-label="Rotate"><span
-                                class="material-symbols-outlined">3d_rotation</span></button>
-                        <button class="control-btn" aria-label="Zoom In"><span
-                                class="material-symbols-outlined">add</span></button>
-                    </div>
+
                 </div>
 
             </div>
@@ -464,7 +459,7 @@
                     </div>
                 </div>
                 <div class="specs-table-container">
-                    <div class="pack-size-selector">
+                    <div class="pack-size-selector" id="packSizeSelector">
                         <div class="pack-size-header">
                             <span class="pack-header-title">Select Pack Size</span>
                             <span class="pack-header-subtitle">Research & GMP grades available</span>
@@ -610,6 +605,21 @@
         });
 
         observer.observe(sentinel);
+
+        // Sticky 'Add to Cart' Scroll Behavior
+        document.getElementById('stickyAddToCart').addEventListener('click', function () {
+            const packSizeSelector = document.getElementById('packSizeSelector');
+            if (packSizeSelector) {
+                const headerOffset = 180; // Enough space for the sticky bar + padding
+                const elementPosition = packSizeSelector.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
     </script>
 </body>
 

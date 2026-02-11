@@ -10,7 +10,7 @@
   --color-accent-teal: #20b2aa;
   --color-highlight-gold: #d4af37;
   --bg-soft-gray: #f8fafc;
-  --font-serif: 'Charter', 'Georgia', serif;
+  /* --font-serif: 'Charter', 'Georgia', serif; Removed to use Global Lora */
 }
 
 /* --- Layout Utils --- */

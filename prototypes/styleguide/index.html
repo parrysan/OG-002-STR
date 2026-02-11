@@ -32,7 +32,8 @@
         /* Sidebar */
         .ds-sidebar {
             width: 280px;
-            background: var(--color-text-primary);
+            background: #FFFFFF;
+            /* Pure White */
             position: fixed;
             height: 100vh;
             overflow-y: auto;
@@ -40,6 +41,7 @@
             display: flex;
             flex-direction: column;
             z-index: 50;
+            border-right: 1px solid var(--color-border);
         }
 
         .ds-logo {
@@ -63,7 +65,7 @@
             display: block;
             width: fit-content;
             padding: 0.5rem 0;
-            color: #E5E7EB;
+            color: var(--color-text-secondary);
             text-decoration: none;
             font-size: 0.95rem;
             transition: color 0.2s;
@@ -77,7 +79,8 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: var(--color-primary-light);
+            height: 2px;
+            background-color: var(--color-primary);
             transform: scaleX(0);
             transform-origin: right;
             transition: transform 0.3s ease-out;
@@ -85,7 +88,7 @@
 
         .ds-nav-link:hover,
         .ds-nav-link.active {
-            color: var(--color-primary-light);
+            color: var(--color-primary);
             font-weight: 500;
         }
 
@@ -202,27 +205,28 @@
     <!-- Sidebar Navigation -->
     <aside class="ds-sidebar">
         <div class="ds-logo">
-            <img src="../../assets/logo/logo-ste-tech_onBlack.svg" alt="STR Technologies" style="height: 48px;">
+            <img src="../../assets/logo/logo-str-06.svg" alt="STR Technologies" style="height: 100px;">
         </div>
 
         <div class="ds-nav-group">
-            <a href="index.html" class="ds-nav-link active">Introduction</a>
+            <a href="/styleguide/index.html" class="ds-nav-link active">Introduction</a>
         </div>
 
         <div class="ds-nav-group">
-            <div class="ds-nav-title">Foundation</div>
-            <a href="writing.html" class="ds-nav-link">Writing Style</a>
-            <a href="colors.html" class="ds-nav-link">Colors</a>
-            <a href="typography.html" class="ds-nav-link">Typography</a>
+
+            <a href="/styleguide/writing.html" class="ds-nav-link">Writing Style</a>
+            <a href="/styleguide/colors.html" class="ds-nav-link">Colors</a>
+            <a href="/styleguide/typography.html" class="ds-nav-link">Typography</a>
+            <a href="/styleguide/logo.html" class="ds-nav-link">Logo & Iconography</a>
         </div>
 
         <div class="ds-nav-group">
-            <div class="ds-nav-title">Building Blocks</div>
-            <a href="components.html" class="ds-nav-link">Components</a>
-            <a href="personas.html" class="ds-nav-link">Avatars & Personas</a>
+
+            <a href="/styleguide/components.html" class="ds-nav-link">Components</a>
+            <a href="/styleguide/personas.html" class="ds-nav-link">Avatars & Personas</a>
         </div>
 
-        <a href="../index.html" class="ds-nav-link" style="margin-top: auto;">Prototype →</a>
+        <a href="/prototype.html" class="ds-nav-link" style="margin-top: auto;">Prototype →</a>
     </aside>
 
     <!-- Main Content -->
@@ -242,7 +246,7 @@
         <!-- Topic Grid -->
         <div class="hub-grid">
             <!-- Card 1: Writing Style -->
-            <a href="writing.html" class="hub-card">
+            <a href="/styleguide/writing.html" class="hub-card">
                 <div class="hub-icon">
                     <span class="material-symbols-outlined">edit_note</span>
                 </div>
@@ -251,7 +255,7 @@
             </a>
 
             <!-- Card 2: Colors -->
-            <a href="colors.html" class="hub-card">
+            <a href="/styleguide/colors.html" class="hub-card">
                 <div class="hub-icon">
                     <span class="material-symbols-outlined">palette</span>
                 </div>
@@ -260,7 +264,7 @@
             </a>
 
             <!-- Card 3: Typography -->
-            <a href="typography.html" class="hub-card">
+            <a href="/styleguide/typography.html" class="hub-card">
                 <div class="hub-icon">
                     <span class="material-symbols-outlined">text_fields</span>
                 </div>
@@ -268,8 +272,17 @@
                 <div class="hub-desc">Type scales, fonts, and hierarchy.</div>
             </a>
 
+            <!-- Card: Logo & Iconography -->
+            <a href="/styleguide/logo.html" class="hub-card">
+                <div class="hub-icon">
+                    <span class="material-symbols-outlined">verified</span>
+                </div>
+                <div class="hub-title">Logo & Iconography</div>
+                <div class="hub-desc">Logos, icons, and brand assets.</div>
+            </a>
+
             <!-- Card 4: Components -->
-            <a href="components.html" class="hub-card">
+            <a href="/styleguide/components.html" class="hub-card">
                 <div class="hub-icon">
                     <span class="material-symbols-outlined">widgets</span>
                 </div>
@@ -278,7 +291,7 @@
             </a>
 
             <!-- Card 5: Avatars & Personas -->
-            <a href="personas.html" class="hub-card">
+            <a href="/styleguide/personas.html" class="hub-card">
                 <div class="hub-icon">
                     <span class="material-symbols-outlined">group</span>
                 </div>

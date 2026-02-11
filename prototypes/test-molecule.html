@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molecule Animation Test</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Replicating and overriding styles from style.css */
+        .hero-molecule {
+            /* position: absolute; removed to center it for the test page, or keep to match exact behavior? 
+               The user asked for a test page using the molecule. Centered seems best for a standalone asset view.
+               However, the animation relies on transform origin/movement. Let's keep the animation logic but center the wrapper.
+            */
+            width: 500px;
+            height: 500px;
+            animation: moleculeCombined1 75s linear infinite;
+        }
+
+        @keyframes moleculeCombined1 {
+            0% {
+                transform: rotate(0deg) translateY(0);
+            }
+
+            25% {
+                transform: rotate(90deg) translateY(-10px);
+            }
+
+            50% {
+                transform: rotate(180deg) translateY(-20px);
+            }
+
+            75% {
+                transform: rotate(270deg) translateY(-10px);
+            }
+
+            100% {
+                transform: rotate(360deg) translateY(0);
+            }
+        }
+
+        /* Overrides for Black on White */
+        .mol-node {
+            fill: none;
+            stroke: #000000;
+            /* Black stroke */
+            stroke-width: 2;
+        }
+
+        .mol-node-fill {
+            fill: #000000;
+            /* Black fill */
+            fill-opacity: 0.1;
+            /* Light opacity for the filled shape */
+            stroke: #000000;
+            stroke-width: 2;
+        }
+
+        .mol-connection {
+            fill: none;
+            stroke: #000000;
+            stroke-width: 1.5;
+            opacity: 0.7;
+        }
+
+        /* Helper to visualize bounds if needed, currently hidden */
+        .debug-bounds {
+            border: 1px dashed #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Molecule 1 from index.html -->
+        <svg class="hero-molecule" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(125, 125)">
+                <polygon class="mol-node-fill" points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" />
+                <circle class="mol-node" cx="0" cy="-40" r="5" />
+                <circle class="mol-node" cx="35" cy="-20" r="5" />
+                <circle class="mol-node" cx="35" cy="20" r="5" />
+                <circle class="mol-node" cx="0" cy="40" r="5" />
+                <circle class="mol-node" cx="-35" cy="20" r="5" />
+                <circle class="mol-node" cx="-35" cy="-20" r="5" />
+                <path class="mol-connection" d="M0,-40 L0,-70" />
+                <circle class="mol-node" cx="0" cy="-70" r="4" />
+                <path class="mol-connection" d="M35,-20 L65,-35" />
+                <circle class="mol-node" cx="65" cy="-35" r="4" />
+                <path class="mol-connection" d="M35,20 L65,35" />
+                <circle class="mol-node" cx="65" cy="35" r="4" />
+                <path class="mol-connection" d="M-35,-20 L-65,-35" />
+                <circle class="mol-node" cx="-65" cy="-35" r="4" />
+                <path class="mol-connection" d="M-35,20 L-65,35 L-85,60" />
+                <circle class="mol-node" cx="-65" cy="35" r="4" />
+                <circle class="mol-node" cx="-85" cy="60" r="4" />
+            </g>
+        </svg>
+    </div>
+
+</body>
+
+</html>

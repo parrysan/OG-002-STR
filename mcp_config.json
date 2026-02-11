@@ -1,0 +1,18 @@
+{
+    "mcpServers": {
+        "perplexity": {
+            "command": "/opt/homebrew/bin/doppler",
+            "args": [
+                "run",
+                "--project",
+                "ogsecrets",
+                "--config",
+                "dev_personal",
+                "--",
+                "npx",
+                "-y",
+                "@perplexity-ai/mcp-server"
+            ]
+        }
+    }
+}

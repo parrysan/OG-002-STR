@@ -35,6 +35,7 @@
 
   /* Typography */
   --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Lora', serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Spacing */
@@ -114,6 +115,15 @@ h4 {
   color: var(--color-text-secondary);
   max-width: 600px;
   margin-bottom: 32px;
+}
+
+.text-editorial {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
 }
 
 .text-h2 {
